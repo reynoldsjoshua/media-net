@@ -8,6 +8,8 @@
     <title>Medianet</title>
 </head>
 <body>
-
+    @foreach($movie as $item)
+        {{ $item->name }}
+    @endforeach
 </body>
 </html>
