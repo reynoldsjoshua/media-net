@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Movie;
+use App\Models\Director;
 use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
-    public function index()
+    public function getMoviesByDirector($directorId)
     {
-        $movie = \App\Models\Movie::all();
+//        $movie = \App\Models\Movie::all();
 
-        return view('home', ['movie' => $movie]);
+        $director = Director::findOrFail($directorId);
+
+        return view('home', [
+            'director' => $director
+        ]);
     }
 }
