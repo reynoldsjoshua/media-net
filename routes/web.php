@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\DirectorsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,4 @@ use App\Http\Controllers\MoviesController;
 |
 */
 
-Route::get('home', [\App\Http\Controllers\MoviesController::class, 'index']);
+Route::get('home/{director}', [\App\Http\Controllers\MoviesController::class, 'getMoviesByDirector']);
