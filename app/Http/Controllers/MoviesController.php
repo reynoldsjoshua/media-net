@@ -13,7 +13,7 @@ class MoviesController extends Controller
 
         $director = Director::findOrFail($directorId);
 
-        return view('home', [
+        return view('director-movies', [
             'director' => $director
         ]);
     }

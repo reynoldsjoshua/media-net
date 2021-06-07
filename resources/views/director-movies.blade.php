@@ -8,9 +8,16 @@
     <title>Medianet</title>
 </head>
 <body>
-
-    @foreach($movie as $item)
-        {{ $item->name }}
-    @endforeach
+    {{ $director->name }}
+    <br><br>
+    {{ $director->name }} has {{ $director->movies->count() }} movies
+    <br><br>
+    @if ($director->movies->count() > 0)
+        <ol>
+            @foreach ($director->movies as $movie)
+                <li>{{ $movie->name }}</li>
+            @endforeach
+        </ol>
+    @endif
 </body>
 </html>

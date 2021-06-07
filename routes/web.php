@@ -15,4 +15,4 @@ use App\Http\Controllers\DirectorsController;
 |
 */
 
-Route::get('home/{director}', [\App\Http\Controllers\MoviesController::class, 'getMoviesByDirector']);
+Route::get('/movies-by-director/{director}', [\App\Http\Controllers\MoviesController::class, 'getMoviesByDirector']);

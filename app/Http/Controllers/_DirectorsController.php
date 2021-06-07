@@ -11,6 +11,6 @@ class DirectorsController extends Controller
     {
         $director = \App\Models\Director::all();
 
-        return view('home', ['director' => $director]);
+        return view('director-movies', ['director' => $director]);
     }
 }
