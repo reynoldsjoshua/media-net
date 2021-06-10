@@ -1,14 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Medianet</title>
-</head>
-<body>
-    {{ $director->name }}
+@extends('layouts.app')
+
+@section('content')
+{{ $director->name }}
+<br><br>
+{{ $director->name }} has {{ $director->movies->count() }} movies
+<br><br>
+@if ($director->movies->count() > 0)
+    <ol>
+        @foreach ($director->movies as $movie)
+            <li>{{ $movie->name }}</li>
+        @endforeach
+    </ol>
+@endif
+@endsection
+<!-- <x-content> -->
+    {{-- {{ $director->name }}
     <br><br>
     {{ $director->name }} has {{ $director->movies->count() }} movies
     <br><br>
@@ -18,6 +24,5 @@
                 <li>{{ $movie->name }}</li>
             @endforeach
         </ol>
-    @endif
-</body>
-</html>
+    @endif --}}
+<!-- </x-content> -->
