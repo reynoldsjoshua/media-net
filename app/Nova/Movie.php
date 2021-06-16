@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\categoryFilter;
+use App\Nova\Lenses\showMovieCategory;
 use Hamcrest\Description;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -48,6 +50,7 @@ class Movie extends Resource
             Text::make('Name', 'name')->sortable(),
             BelongsTo::make('Director', 'director', Director::class),
             Text::make('Description', 'description'),
+            Text::make('Category', 'category')->sortable(),
             Date::make('Released at', 'released_at'),
         ];
     }
@@ -71,7 +74,9 @@ class Movie extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new categoryFilter()
+        ];
     }
 
     /**
@@ -82,7 +87,9 @@ class Movie extends Resource
      */
     public function lenses(Request $request)
     {
-        return [];
+        return [
+            new showMovieCategory()
+        ];
     }
 
     /**

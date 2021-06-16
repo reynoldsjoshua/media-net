@@ -26,6 +26,7 @@ class MovieFactory extends Factory
             'name' => $this->faker->name(),
             'description' => $this->faker->sentence(),
             'released_at' => $this->faker->date(),
+            'category' => $this->faker->randomElement(['Horror', 'Drama', 'Comedy', 'Action', 'Scyfy']),
             'director_id' => Director::factory()
         ];
     }
