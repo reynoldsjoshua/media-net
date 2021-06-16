@@ -5,7 +5,7 @@ namespace App\Nova\Filters;
 use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;
 
-class categoryFilter extends Filter
+class category extends Filter
 {
     /**
      * The filter's component.
@@ -36,11 +36,11 @@ class categoryFilter extends Filter
     public function options(Request $request)
     {
         return [
-            'Comedy' => 'comedy',
-            'Horror' => 'horror',
-            'Drama' => 'drama',
-            'Action' => 'action',
-            'Scyfy' => 'scyfy',
+            'Comedy' => 'Comedy',
+            'Horror' => 'Horror',
+            'Drama' => 'Drama',
+            'Action' => 'Action',
+            'Scyfy' => 'Scyfy',
         ];
     }
 }

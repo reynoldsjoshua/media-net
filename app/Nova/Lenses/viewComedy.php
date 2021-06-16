@@ -2,13 +2,16 @@
 
 namespace App\Nova\Lenses;
 
+use App\Nova\Director;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\LensRequest;
 use Laravel\Nova\Lenses\Lens;
 
-class showMovieCategory extends Lens
+class viewComedy extends Lens
 {
     /**
      * Get the query builder / paginator for the lens.
@@ -34,7 +37,11 @@ class showMovieCategory extends Lens
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Category', 'category'),
+            Text::make('Title', 'name')->sortable(),
+            BelongsTo::make('Director', 'director', Director::class),
+            Text::make('Description', 'description'),
+            Text::make('Category', 'category')->sortable(),
+            Date::make('Released at', 'released_at')->sortable(),
         ];
     }
 

@@ -2,13 +2,14 @@
 
 namespace App\Nova;
 
-use App\Nova\Filters\categoryFilter;
-use App\Nova\Lenses\showMovieCategory;
+use App\Nova\Filters\category;
+use App\Nova\Lenses\viewComedy;
 use Hamcrest\Description;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -47,11 +48,17 @@ class Movie extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Name', 'name')->sortable(),
+            Text::make('Title', 'name')->sortable(),
             BelongsTo::make('Director', 'director', Director::class),
             Text::make('Description', 'description'),
-            Text::make('Category', 'category')->sortable(),
-            Date::make('Released at', 'released_at'),
+            Select::make('Category', 'category')->options([
+                'Comedy' => 'Comedy',
+                'Horror' => 'Horror',
+                'Drama' => 'Drama',
+                'Action' => 'Action',
+                'Scyfy' => 'Scyfy',
+            ])->sortable(),
+            Date::make('Released at', 'released_at')->sortable(),
         ];
     }
 
@@ -75,7 +82,7 @@ class Movie extends Resource
     public function filters(Request $request)
     {
         return [
-            new categoryFilter()
+            new category()
         ];
     }
 
@@ -88,7 +95,7 @@ class Movie extends Resource
     public function lenses(Request $request)
     {
         return [
-            new showMovieCategory()
+            new viewComedy()
         ];
     }
 
