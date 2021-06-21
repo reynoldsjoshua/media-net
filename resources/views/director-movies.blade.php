@@ -10,12 +10,18 @@
                 <form action="{{ route('deleteMovie', $movie->director) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit">Delete</button>
+                    <button type="submit" class="bg-blue-500">Delete</button>
                 </form>
             @endforeach
         </ol>
     @endif
 </x-content>
+
+
+
+
+
+
 {{--@extends('layouts.app')--}}
 
 {{--@section('content')--}}
