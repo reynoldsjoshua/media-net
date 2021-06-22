@@ -1,0 +1,12 @@
+header {
+    background-color: #3348A0;
+    padding: 0 1.5rem;
+}
+
+.nav-max-w {
+    max-width: 120rem;
+}
+
+.li-nav-border-color {
+    border-color: #485BA8;
+}
