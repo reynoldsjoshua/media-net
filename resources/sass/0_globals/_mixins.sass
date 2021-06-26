@@ -1,0 +1,34 @@
+//global mixins
+
+//map
+//1091px
+$breakpoints-up: ('n1091': '68.1875rem')
+
+//410px, 475px, 550px 650px, 745px, 875px, 950px, 995px, 1090px
+$breakpoints-down: ('n410': '25.625rem', 'n475': '29.6875rem', 'n550': '34.375rem', 'n650': '40.625rem', 'n745': '46.5625rem', 'n875': '54.6875rem', 'n950': '59.375rem', 'n995': '62.1875rem', 'n1090': '68.125rem')
+
+//mobile to desktop
+@mixin breakpoint-up($size)
+    @media (min-width: map-get($breakpoints-up, $size))
+        @content
+
+//desktop to mobile
+@mixin breakpoint-down($size)
+    @media (max-width: map-get($breakpoints-down, $size))
+        @content
+
+//reusable mixins
+@mixin trans($time)
+    transition: all $time ease-in-out
+
+@mixin max_width($width)
+    max-width: $width
+
+@mixin min_width($width)
+    min-width: $width
+
+@mixin max_height($height)
+    max-height: $height
+
+@mixin min_height($height)
+    min-height: $height

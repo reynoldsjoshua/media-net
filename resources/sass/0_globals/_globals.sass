@@ -1,0 +1,105 @@
+//global rules
+
+//html elements
+html
+    font-size: 100%
+    box-sizing: border-box
+    @include min_height(100%)
+
+*, *::before, *::after
+    box-sizing: inherit
+    outline: none
+    box-shadow: none
+    border: 0
+    margin: 0
+    padding: 0
+
+body
+    background: $white
+
+h1, h2, h3, p
+    margin: 0
+    padding: 0
+
+h1
+    font-size: $n30
+    font-weight: 600
+
+h2
+    font-size: $n41
+    font-weight: 500
+    line-height: $n45
+
+h3
+    font-size: $n15
+    font-weight: 500
+
+h4
+    font-size: $n25
+    font-weight: 500
+
+h5
+    font-size: $n19
+    font-weight: 500
+p
+    font-size: $n14
+    font-weight: 500
+
+h6
+    font-size: $n14
+    font-weight: 600
+
+a, a:visited, a:hover
+    text-decoration: none
+
+svg
+    display: block
+
+ul
+    list-style-type: none
+
+input
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    background-color: $black
+    border: 0
+    border-radius: $n20 0 0 $n20
+    padding: $n8_25 $n16
+    font-size: $n15
+    font-weight: 600
+    color: $white
+    &:focus
+        color: $white
+        box-shadow: none
+    &:invalid
+        box-shadow: none
+
+textarea
+    font-family: Arial, Helvetica, sans-serif !important
+
+//helper classes
+.flex //flex values
+    display: flex
+    &_jc_sb
+        justify-content: space-between
+    &_jc_c
+        justify-content: center
+    &_jc_fs
+        justify-content: flex-start
+    &_jc_fe
+        justify-content: flex-end
+    &_ai_c
+        align-items: center
+    &_ai_fs
+        align-items: flex-start
+    &_dr_c
+        flex-direction: column
+    &_dr_cr
+        flex-direction: column-reverse
+    &_dr_r
+        flex-direction: row
+    &_dr_rr
+        flex-direction: row-reverse
+
+//classes

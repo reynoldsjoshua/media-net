@@ -1,3 +1,3 @@
-<x-navigation>
+<x-app>
 
-</x-navigation>
+</x-app>

@@ -1,0 +1,25 @@
+//navigation
+
+.nav_wrapper
+    position: relative
+    border-radius: $n20 0 0 $n20
+    padding-left: $n30
+    @include max_width($n205)
+    width: $n205
+    height: 100%
+    background-color: $black
+    @include trans(0.2s)
+    @include breakpoint-down(n1090)
+        width: $n90
+    @include breakpoint-down(n475)
+        border-radius: 0
+
+header
+    background-color: #3348A0
+    padding: 0 1.5rem
+
+.nav-max-w
+    max-width: 120rem
+
+.li-nav-border-color
+    border-color: #485BA8
