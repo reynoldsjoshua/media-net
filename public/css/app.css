@@ -128,6 +128,27 @@ textarea {
   flex-direction: row-reverse;
 }
 
+@-webkit-keyframes fly_in {
+  0% {
+    transform: translateY(3.125rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fly_in {
+  0% {
+    transform: translateY(3.125rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .nav_wrapper {
   position: relative;
   border-radius: 1.25rem 0 0 1.25rem;
@@ -160,47 +181,4 @@ header {
 
 .li-nav-border-color {
   border-color: #485BA8;
-}
-
-.home_wrapper {
-  position: relative;
-  max-width: 77.5rem;
-  max-height: 54.25rem;
-  height: 100%;
-  width: 100%;
-  border-radius: 1.25rem;
-  background-color: #000000;
-  box-shadow: 0 1.25rem 3.125rem black;
-  z-index: 1;
-  transform-style: preserve-3d;
-  transform: perspective(62.5rem);
-  transition: all 0.2s ease-in-out;
-  overflow: hidden;
-}
-@media (max-width: 29.6875rem) {
-  .home_wrapper {
-    border-radius: 0;
-  }
-}
-
-@-webkit-keyframes fly_in {
-  0% {
-    transform: translateY(3.125rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fly_in {
-  0% {
-    transform: translateY(3.125rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
