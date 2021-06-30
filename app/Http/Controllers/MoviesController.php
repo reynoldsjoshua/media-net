@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use App\Models\Director;
 use Illuminate\Http\Request;
 
@@ -12,17 +13,30 @@ class MoviesController extends Controller
 
         $director = Director::findOrFail($directorId);
 
-        return view('director-movies', [
+        return view('index', [
             'director' => $director
         ]);
     }
 
-    public function deleteAMovie($director)
+    public function getAllMovies()
     {
-        $director = Director::where('name', $director)->first();
-        $director->director()->detach();
-        $director->delete();
+        $movies = Movie::all();
 
-        return redirect('/movies-by-director/1');
+        $directors = Director::all();
+
+        return view('index', [
+            'movies' => $movies,
+            'directors' => $directors
+        ]);
+
     }
+
+    // public function deleteAMovie($director)
+    // {
+    //     $director = Director::where('name', $director)->first();
+    //     $director->director()->detach();
+    //     $director->delete();
+
+    //     return redirect('index');
+    // }
 }

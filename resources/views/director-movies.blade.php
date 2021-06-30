@@ -1,4 +1,4 @@
-<x-content>
+<x-app>
     {{ $director->name }}
     <br><br>
     {{ $director->name }} has {{ $director->movies->count() }} movies
@@ -15,7 +15,7 @@
             @endforeach
         </ol>
     @endif
-</x-content>
+</x-app>
 
 
 

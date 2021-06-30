@@ -16,8 +16,4 @@ use App\Http\Controllers\DirectorsController;
 |
 */
 
-Route::get('/', [mediaController::class, 'index']);
-
-Route::get('/movies-by-director/{director}', [MoviesController::class, 'getMoviesByDirector']);
-
-Route::delete('/movies-by-director/{director}', [MoviesController::class, 'deleteAMovie'])->name('deleteMovie');
+Route::get('/', [MoviesController::class, 'getAllMovies']);
