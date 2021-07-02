@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Game;
 use App\Models\Movie;
 use App\Models\GameNews;
 use App\Models\MovieNews;
@@ -16,8 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Movie::factory(10)->create();
-        MovieNews::factory(10)->create();
-        GameNews::factory(10)->create();
+        Movie::factory(20)->create();
+        Game::factory(20)->create();
+        MovieNews::factory(20)->create();
+        GameNews::factory(20)->create();
     }
 }

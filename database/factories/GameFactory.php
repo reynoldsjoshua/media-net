@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\MovieNews;
+use App\Models\Game;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class MovieNewsFactory extends Factory
+class GameFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = MovieNews::class;
+    protected $model = Game::class;
 
     /**
      * Define the model's default state.
@@ -23,8 +23,10 @@ class MovieNewsFactory extends Factory
     {
         return [
             'title' => $this->faker->word(),
-            'description' => $this->faker->sentence(),
             'url' => $this->faker->image(),
+            'release_date' => $this->faker->date(),
+            'genre' => $this->faker->randomElement(['Horror', 'Strategy', 'Puzzle', 'Action', 'Fantasy', 'RPG', 'Sports', 'FPS']),
+            'rating' => $this->faker->randomLetter(),
         ];
     }
 }
