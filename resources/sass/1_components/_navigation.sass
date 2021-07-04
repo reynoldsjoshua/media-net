@@ -1,25 +1,61 @@
 //navigation
 
-.nav_wrapper
-    position: relative
-    border-radius: $n20 0 0 $n20
-    padding-left: $n30
-    @include max_width($n205)
-    width: $n205
-    height: 100%
-    background-color: $black
-    @include trans(0.2s)
-    @include breakpoint-down(n1090)
-        width: $n90
-    @include breakpoint-down(n475)
-        border-radius: 0
-
-header
-    background-color: #3348A0
-    padding: 0 1.5rem
-
-.nav-max-w
-    max-width: 120rem
-
-.li-nav-border-color
-    border-color: #485BA8
+.navigation
+    background-color: $purple-600
+    padding: $n12px $n24px
+    border-bottom: 1px solid $purple-550
+    nav
+        max-width: $n1200px
+        ul
+            position: relative
+            .nav_link
+                position: relative
+                @include breakpoint-down(n870px)
+                    display: none
+                &::after
+                    content: ''
+                    position: absolute
+                    width: $n2px
+                    height: $n20px
+                    background-color: $purple-500
+                    top: 50%
+                    left: 100%
+                    transform: translate(-50%,-50%)
+                .active
+                    color: $green-300
+        .logo_container
+            margin-right: $n35px
+            .logo
+                width: 100%
+                @include min_width($n73_54px)
+                @include max_width($n73_54px)
+        form div
+                background-color: $white
+                border-radius: $n20px
+                height: $n24px
+                @include breakpoint-down(n870px)
+                    display: none
+                input
+                    border-radius: $n20px 0 0 $n20px
+                button
+                    background-color: $white
+                    height: $n24px
+                    width: $n24px
+                    border-radius: 0 $n20px $n20px 0
+                    font-size: $n15px
+                    padding-right: $n5px
+                    color: $pink-600
+        .profile_wrapper
+            .profile_container
+                padding-left: $n26px
+                color: $white
+                @include breakpoint-down(n870px)
+                    display: none
+                .profile_icon
+                    margin-right: $n6px
+            .menu_container
+                color: $white
+                font-size: $n30px
+                cursor: pointer
+                @include breakpoint-down(n870px)
+                    display: block
