@@ -5,4 +5,34 @@
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
-    height: 222.7px
+    height: $n222_7px
+    .block_wrapper
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-row-gap: $n20px
+        height: $n158px
+        width: 100%
+        max-width: $n1200px
+        padding: 0 $n24px
+        .footer_block:nth-child(1)
+            .social_links
+                fill: $white
+                cursor: pointer
+                position: relative
+                @include trans(0.3s)
+            .facebook
+                transform-origin: 40% 50%
+            .twitter
+                transform-origin: 30% 50%
+            .snapchat
+                transform-origin: 20% 70%
+            .linkedin
+                transform-origin: 50% 80%
+            .facebook, .twitter, .snapchat, .linkedin
+                &:hover
+                    transform: scale(0.8)
+        .footer_block:nth-child(3) p
+            text-align: right
+            color: $white
+            font-size: $n16px
+            font-weight: bold

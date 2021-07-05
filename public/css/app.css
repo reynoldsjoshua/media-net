@@ -53,6 +53,12 @@ textarea {
   font-family: Helvetica, sans-serif !important;
 }
 
+.logo {
+  width: 100%;
+  min-width: 4.59625rem;
+  max-width: 4.59625rem;
+}
+
 .navigation {
   background-color: #3348A0;
   padding: 0.75rem 1.5rem;
@@ -87,11 +93,6 @@ textarea {
 }
 .navigation nav .logo_container {
   margin-right: 2.1875rem;
-}
-.navigation nav .logo_container .logo {
-  width: 100%;
-  min-width: 4.59625rem;
-  max-width: 4.59625rem;
 }
 .navigation nav form div {
   background-color: #ffffff;
@@ -143,5 +144,41 @@ textarea {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 222.7px;
+  height: 13.91875rem;
+}
+.footer .block_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1.25rem;
+  height: 9.875rem;
+  width: 100%;
+  max-width: 75rem;
+  padding: 0 1.5rem;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .social_links {
+  fill: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .facebook {
+  transform-origin: 40% 50%;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .twitter {
+  transform-origin: 30% 50%;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .snapchat {
+  transform-origin: 20% 70%;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .linkedin {
+  transform-origin: 50% 80%;
+}
+.footer .block_wrapper .footer_block:nth-child(1) .facebook:hover, .footer .block_wrapper .footer_block:nth-child(1) .twitter:hover, .footer .block_wrapper .footer_block:nth-child(1) .snapchat:hover, .footer .block_wrapper .footer_block:nth-child(1) .linkedin:hover {
+  transform: scale(0.8);
+}
+.footer .block_wrapper .footer_block:nth-child(3) p {
+  text-align: right;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
 }
