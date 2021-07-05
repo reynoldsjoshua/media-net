@@ -10,6 +10,7 @@
             position: relative
             .nav_link
                 position: relative
+                @include trans(0.3s)
                 @include breakpoint-down(n870px)
                     display: none
                 &::after
@@ -21,6 +22,8 @@
                     top: 50%
                     left: 100%
                     transform: translate(-50%,-50%)
+                &:hover
+                    color: $green-300
                 .active
                     color: $green-300
         .logo_container
@@ -45,8 +48,11 @@
             .profile_container
                 padding-left: $n26px
                 color: $white
+                @include trans(0.3s)
                 @include breakpoint-down(n870px)
                     display: none
+                &:hover
+                    color: $green-300
                 .profile_icon
                     margin-right: $n6px
             .menu_container
