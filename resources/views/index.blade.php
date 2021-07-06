@@ -31,12 +31,22 @@
     @endforeach --}}
 
     @foreach ($directors as $i => $director)
-        @if ($i >= 5)
+        @if ($i < 5)
         <br>
-        <li>{{ $director->name }}</li>
+        <li>{{ $director->name }} director name</li>
         <br>
         @endif
     @endforeach
 
+    @foreach ($movies as $i => $movie)
+        @if ($i < 5)
+        <br>
+        <li>{{ $movie->name }}</li>
+        <li>{{ $movie->genre }}</li>
+        <li>{{ $movie->rating }}</li>
+        <li>{{ $movie->duration }}</li>
+        <br>
+        @endif
+    @endforeach
 
 </x-app>

@@ -1,4 +1,4 @@
-@foreach ($movies as $i => $movie)
+{{-- @foreach ($movies as $i => $movie)
     @if ($i < 5)
     <br>
     <li>{{ $movie->name }}</li>
@@ -7,7 +7,7 @@
     <li>{{ $movie->duration }}</li>
     <br>
     @endif
-@endforeach
+@endforeach --}}
 
 <style>
     body {

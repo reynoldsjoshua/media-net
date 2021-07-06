@@ -19,5 +19,5 @@ use App\Http\Controllers\DirectorsController;
 */
 
 Route::get('/', [MoviesController::class, 'getAllMovies']);
-Route::get('/', [NewsController::class, 'getAllNews']);
-Route::get('/', [GamesController::class, 'getAllGames']);
+// Route::get('/', [NewsController::class, 'getAllNews']);
+// Route::get('/', [GamesController::class, 'getAllGames']);
