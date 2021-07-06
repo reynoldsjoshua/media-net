@@ -30,13 +30,4 @@ class MoviesController extends Controller
         ]);
 
     }
-
-    // public function deleteAMovie($director)
-    // {
-    //     $director = Director::where('name', $director)->first();
-    //     $director->director()->detach();
-    //     $director->delete();
-
-    //     return redirect('index');
-    // }
 }

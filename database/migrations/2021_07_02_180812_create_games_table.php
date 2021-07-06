@@ -20,6 +20,7 @@ class CreateGamesTable extends Migration
             $table->date('release_date');
             $table->string('rating');
             $table->string('genre');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

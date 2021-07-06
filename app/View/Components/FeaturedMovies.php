@@ -4,16 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Content extends Component
+class FeaturedMovies extends Component
 {
+    public $movies;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($movies)
     {
-        //
+        $this->movies = $movies;
     }
 
     /**
@@ -23,6 +24,6 @@ class Content extends Component
      */
     public function render()
     {
-        return view('components.content');
+        return view('components.featured-movies');
     }
 }

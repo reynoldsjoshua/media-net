@@ -202,3 +202,24 @@ main {
   width: 100%;
   padding-bottom: 1rem;
 }
+
+.featured_movies {
+  border: 5px solid red;
+  padding: 0 24px;
+}
+.featured_movies h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+}
+.featured_movies .movie_wrapper {
+  position: relative;
+  border: 5px solid green;
+}
+.featured_movies .movie_wrapper .mySlides img, .featured_movies .movie_wrapper .column img {
+  border-radius: 20px;
+}
+.featured_movies .movie_wrapper .mySlides {
+  border: 5px solid purple;
+  height: 395px;
+}

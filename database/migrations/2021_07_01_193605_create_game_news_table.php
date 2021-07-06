@@ -19,6 +19,7 @@ class CreateGameNewsTable extends Migration
             $table->string('description');
             $table->string('url');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
