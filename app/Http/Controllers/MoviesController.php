@@ -20,13 +20,10 @@ class MoviesController extends Controller
 
     public function getAllMovies()
     {
-        $movies = Movie::all();
-
-        $directors = Director::all();
+        $movies = Movie::with('director')->get();
 
         return view('index', [
             'movies' => $movies,
-            'directors' => $directors
         ]);
 
     }
