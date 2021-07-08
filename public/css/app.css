@@ -152,7 +152,7 @@ main {
 }
 
 .footer {
-  background-image: url("/img/footer.svg");
+  background-image: url("/img/footer2.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -222,4 +222,10 @@ main {
 .featured_movies .movie_wrapper .mySlides {
   border: 5px solid purple;
   height: 395px;
+}
+
+.test-ul {
+  color: #ffffff;
+  margin-left: 1.5625rem;
+  list-style-type: disc;
 }

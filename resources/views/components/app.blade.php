@@ -12,7 +12,7 @@
     <script src="{{ asset('/js/slideshow.js') }}"></script>
 </head>
 <body>
-    
+
     <header class="navigation">
         <nav class="flex justify-between mx-auto">
             <ul class="flex items-center">
@@ -34,7 +34,7 @@
                     <a href="#">News</a>
                 </li>
             </ul>
-            
+
             <div class="flex">
                 <form action="" method="POST" class="flex justify-center items-center">
                     <div class="flex">
@@ -57,7 +57,7 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         {{$slot}}
     </main>

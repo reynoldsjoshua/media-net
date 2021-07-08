@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
-use App\Http\Controllers\GamesController;
-use App\Http\Controllers\mediaController;
-use App\Http\Controllers\MoviesController;
-use App\Http\Controllers\DirectorsController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +14,4 @@ use App\Http\Controllers\DirectorsController;
 |
 */
 
-Route::get('/', [MoviesController::class, 'getAllMovies']);
-// Route::get('/', [NewsController::class, 'getAllNews']);
-// Route::get('/', [GamesController::class, 'getAllGames']);
+Route::get('/', [IndexController::class, 'index']);
