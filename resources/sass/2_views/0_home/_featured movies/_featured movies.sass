@@ -1,17 +1,102 @@
 //featured movies
 
 .featured_movies
-    border: 5px solid red
-    padding: 0 24px
+    max-width: $n1200px
+    margin: auto
     h1
         color: $white
         font-size: 28px
         font-weight: bold
+        margin-bottom: 15px
     .movie_wrapper
         position: relative
-        border: 5px solid green
-        .mySlides img, .column img
-            border-radius: 20px
-        .mySlides
-            border: 5px solid purple
+        .image
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            width: 100%
             height: 395px
+            object-fit: cover
+            &:hover .layover
+                left: 0
+                opacity: 1
+            &:hover h2
+                right: 0
+            h2
+                color: $white
+                z-index: 10
+                transition: all 0.4s ease
+                transition-delay: 0.2s
+        .slide_info
+            padding: 5px 0 5px 10px
+            p
+                margin-right: 10px
+                color: $white
+                font-size: 19px
+                font-weight: 400
+            .movie_info
+                color: $green-350
+                font-weight: bold
+    .prev, .next
+        cursor: pointer
+        position: absolute
+        top: 50%
+        width: auto
+        padding: 16px
+        margin-top: -50px
+        color: white
+        font-weight: bold
+        font-size: 20px
+        border-radius: 0 3px 3px 0
+        user-select: none
+        -webkit-user-select: none
+        @include trans(0.3s)
+        &:hover
+            background-color: rgba(0, 0, 0, 0.8)
+    .next
+        right: 0
+        border-radius: 3px 0 0 3px
+    .small_image_wrapper
+        &:hover .layover
+            left: 0
+            opacity: 1
+        &:hover h3
+            left: 50%
+            opacity: 1
+        .small_images
+            width: 100%
+            max-width: 240px
+            height: 100%
+            max-height: 211px
+            object-fit: cover
+        h3
+            top: 50%
+            left: 100%
+            color: $white
+            opacity: 0
+            z-index: 10
+            transform: translate(-50%,-50%)
+            transition: all 0.4s ease
+            transition-delay: 0.2s
+        
+
+//make all images round corners
+.slider_image, .image
+    border-radius: 10px
+    cursor: pointer
+
+//hide all slider images except for the first image
+.mySlides + .mySlides
+    display: none
+
+//black layover for images
+.layover
+    position: absolute
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.9)
+    border-radius: 10px
+    opacity: 0
+    transition: all 0.4s ease
