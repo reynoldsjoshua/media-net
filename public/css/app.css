@@ -53,20 +53,23 @@ textarea {
   font-family: Helvetica, sans-serif !important;
 }
 
-main {
-  margin: 83px 0;
-  padding: 0 24px;
-}
-
 .logo {
   width: 100%;
   min-width: 4.59625rem;
   max-width: 4.59625rem;
 }
 
+.game_background {
+  background-image: url("/img/game_background.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 1535px;
+}
+
 .navigation {
   background-color: #3348A0;
   padding: 0.75rem 1.5rem;
+  margin-bottom: 83px;
   border-bottom: 1px solid #5C6FBE;
 }
 .navigation nav {
@@ -152,14 +155,20 @@ main {
   }
 }
 
-.footer {
+.footer_background {
+  background-color: #30385A;
+  padding-top: 83px;
+  max-width: 1920px;
+  margin: auto;
+}
+.footer_background .footer {
   background-image: url("/img/footer.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 13.91875rem;
 }
-.footer .block_wrapper {
+.footer_background .footer .block_wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 1.25rem;
@@ -168,34 +177,34 @@ main {
   max-width: 75rem;
   padding: 0 1.5rem;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .social_links {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .social_links {
   fill: #ffffff;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .facebook {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .facebook {
   transform-origin: 40% 50%;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .twitter {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .twitter {
   transform-origin: 30% 50%;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .snapchat {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .snapchat {
   transform-origin: 20% 70%;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .linkedin {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .linkedin {
   transform-origin: 50% 80%;
 }
-.footer .block_wrapper .footer_block:nth-child(1) .facebook:hover, .footer .block_wrapper .footer_block:nth-child(1) .twitter:hover, .footer .block_wrapper .footer_block:nth-child(1) .snapchat:hover, .footer .block_wrapper .footer_block:nth-child(1) .linkedin:hover {
+.footer_background .footer .block_wrapper .footer_block:nth-child(1) .facebook:hover, .footer_background .footer .block_wrapper .footer_block:nth-child(1) .twitter:hover, .footer_background .footer .block_wrapper .footer_block:nth-child(1) .snapchat:hover, .footer_background .footer .block_wrapper .footer_block:nth-child(1) .linkedin:hover {
   transform: scale(0.8);
 }
-.footer .block_wrapper .footer_block:nth-child(3) p {
+.footer_background .footer .block_wrapper .footer_block:nth-child(3) p {
   text-align: right;
   color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
 }
-.footer .copyright {
+.footer_background .footer .copyright {
   color: #ffffff;
   font-weight: bold;
   font-size: 0.75rem;
@@ -204,55 +213,59 @@ main {
   padding-bottom: 1rem;
 }
 
-.featured_movies {
+.featured_games {
+  padding-top: 240px;
+}
+
+.featured {
   max-width: 75rem;
   margin: auto;
 }
-.featured_movies h1 {
+.featured h1 {
   color: #ffffff;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 15px;
 }
-.featured_movies .movie_wrapper {
+.featured .featured_wrapper {
   position: relative;
 }
-.featured_movies .movie_wrapper .image {
+.featured .featured_wrapper .image {
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   background-size: cover;
   width: 100%;
   height: 395px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.featured_movies .movie_wrapper .image:hover .layover {
+.featured .featured_wrapper .image:hover .layover {
   left: 0;
   opacity: 1;
 }
-.featured_movies .movie_wrapper .image:hover h2 {
+.featured .featured_wrapper .image:hover h2 {
   right: 0;
 }
-.featured_movies .movie_wrapper .image h2 {
+.featured .featured_wrapper .image h2 {
   color: #ffffff;
   z-index: 10;
   transition: all 0.4s ease;
   transition-delay: 0.2s;
 }
-.featured_movies .movie_wrapper .slide_info {
+.featured .featured_wrapper .slide_info {
   padding: 5px 0 5px 10px;
 }
-.featured_movies .movie_wrapper .slide_info p {
+.featured .featured_wrapper .slide_info p {
   margin-right: 10px;
   color: #ffffff;
   font-size: 19px;
   font-weight: 400;
 }
-.featured_movies .movie_wrapper .slide_info .movie_info {
+.featured .featured_wrapper .slide_info .featured_info {
   color: #33E7CB;
   font-weight: bold;
 }
-.featured_movies .prev, .featured_movies .next {
+.featured .prev, .featured .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -269,30 +282,28 @@ main {
   -webkit-user-select: none;
   transition: all 0.3s ease-in-out;
 }
-.featured_movies .prev:hover, .featured_movies .next:hover {
+.featured .prev:hover, .featured .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.featured_movies .next {
+.featured .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.featured_movies .small_image_wrapper:hover .layover {
+.featured .small_image_wrapper {
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.featured .small_image_wrapper:hover .layover {
   left: 0;
   opacity: 1;
 }
-.featured_movies .small_image_wrapper:hover h3 {
+.featured .small_image_wrapper:hover h3 {
   left: 50%;
   opacity: 1;
 }
-.featured_movies .small_image_wrapper .small_images {
-  width: 100%;
-  max-width: 240px;
-  height: 100%;
-  max-height: 211px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.featured_movies .small_image_wrapper h3 {
+.featured .small_image_wrapper h3 {
   top: 50%;
   left: 100%;
   color: #ffffff;
@@ -303,12 +314,11 @@ main {
   transition-delay: 0.2s;
 }
 
-.slider_image, .image {
+.image, .small_image_wrapper {
   border-radius: 10px;
-  cursor: pointer;
 }
 
-.mySlides + .mySlides {
+.mySlides + .mySlides, .mySlides2 + .mySlides2 {
   display: none;
 }
 

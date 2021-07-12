@@ -1,6 +1,8 @@
 //featured movies
 
-.featured_movies
+.featured_games
+    padding-top: 240px
+.featured
     max-width: $n1200px
     margin: auto
     h1
@@ -8,11 +10,11 @@
         font-size: 28px
         font-weight: bold
         margin-bottom: 15px
-    .movie_wrapper
+    .featured_wrapper
         position: relative
         .image
             background-repeat: no-repeat
-            background-position: center center
+            background-position: top
             background-size: cover
             width: 100%
             height: 395px
@@ -34,7 +36,7 @@
                 color: $white
                 font-size: 19px
                 font-weight: 400
-            .movie_info
+            .featured_info
                 color: $green-350
                 font-weight: bold
     .prev, .next
@@ -57,18 +59,16 @@
         right: 0
         border-radius: 3px 0 0 3px
     .small_image_wrapper
+        height: 150px
+        background-repeat: no-repeat
+        background-position: top
+        background-size: cover
         &:hover .layover
             left: 0
             opacity: 1
         &:hover h3
             left: 50%
             opacity: 1
-        .small_images
-            width: 100%
-            max-width: 240px
-            height: 100%
-            max-height: 211px
-            object-fit: cover
         h3
             top: 50%
             left: 100%
@@ -81,12 +81,11 @@
         
 
 //make all images round corners
-.slider_image, .image
+.image, .small_image_wrapper
     border-radius: 10px
-    cursor: pointer
 
 //hide all slider images except for the first image
-.mySlides + .mySlides
+.mySlides + .mySlides, .mySlides2 + .mySlides2
     display: none
 
 //black layover for images
