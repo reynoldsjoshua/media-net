@@ -30,6 +30,7 @@ class MovieFactory extends Factory
             'rating' => $this->faker->randomLetter(),
             'duration' => $this->faker->randomDigit(),
             'url' => $this->faker->image(),
+            'user_rating' => $this->faker->randomDigit(),
             'director_id' => Director::factory()
         ];
     }

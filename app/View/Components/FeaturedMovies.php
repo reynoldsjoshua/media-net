@@ -24,6 +24,6 @@ class FeaturedMovies extends Component
      */
     public function render()
     {
-        return view('components.featured-movies');
+        return view('components.index.featured-movies');
     }
 }

@@ -24,6 +24,6 @@ class FeaturedGames extends Component
      */
     public function render()
     {
-        return view('components.featured-games');
+        return view('components.index.featured-games');
     }
 }

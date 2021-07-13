@@ -23,6 +23,6 @@ class App extends Component
      */
     public function render()
     {
-        return view('components.app');
+        return view('components.global.app');
     }
 }
