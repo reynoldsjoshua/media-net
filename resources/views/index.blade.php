@@ -5,6 +5,8 @@
     {{-- show featured movies --}}
     <x-featured-movies :movies="$movies"/>
 
+    <x-movie-news :movieNews="$movieNews"/>
+
     <div class="game_background">
         
         {{-- show featured games --}}

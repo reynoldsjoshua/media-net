@@ -333,3 +333,34 @@ textarea {
   opacity: 0;
   transition: all 0.4s ease;
 }
+
+.news_wrapper {
+  color: #ffffff;
+  font-weight: bold;
+}
+.news_wrapper h1 {
+  font-size: 28px;
+}
+.news_wrapper .news_card {
+  background-color: #3348A0;
+  transition: all 1s;
+}
+.news_wrapper .news_card:hover {
+  background-image: linear-gradient(to right, #3348A0, #9E27DC, #3348A0);
+}
+.news_wrapper .news_card .news_icon {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.news_wrapper .news_card h2 {
+  font-size: 23px;
+}
+.news_wrapper .news_card p {
+  font-size: 16px;
+}
