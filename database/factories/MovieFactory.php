@@ -29,7 +29,7 @@ class MovieFactory extends Factory
             'genre' => $this->faker->randomElement(['Horror', 'Drama', 'Comedy', 'Action', 'Scyfy']),
             'rating' => $this->faker->randomLetter(),
             'duration' => $this->faker->randomDigit(),
-            'url' => $this->faker->image(),
+            'url' => $this->faker->imageUrl($width = 640, $height = 480, 'cats', true, 'Faker'),
             'user_rating' => $this->faker->randomDigit(),
             'director_id' => Director::factory()
         ];

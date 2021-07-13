@@ -23,7 +23,7 @@ class GameFactory extends Factory
     {
         return [
             'title' => $this->faker->word(),
-            'url' => $this->faker->image(),
+            'url' => $this->faker->imageUrl($width = 640, $height = 480, 'sports', true, 'Faker'),
             'release_date' => $this->faker->date(),
             'genre' => $this->faker->randomElement(['Horror', 'Strategy', 'Puzzle', 'Action', 'Fantasy', 'RPG', 'Sports', 'FPS']),
             'rating' => $this->faker->randomLetter(),

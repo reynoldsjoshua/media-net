@@ -24,7 +24,7 @@ class GameNewsFactory extends Factory
         return [
             'title' => $this->faker->word(),
             'description' => $this->faker->sentence(),
-            'url' => $this->faker->image(),
+            'url' => $this->faker->imageUrl($width = 640, $height = 480, 'sports', true, 'Faker'),
         ];
     }
 }
