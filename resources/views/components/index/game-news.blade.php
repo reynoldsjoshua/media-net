@@ -1,7 +1,7 @@
-<section class="news_container" style="margin-bottom: 80px;">
-    <h1>Movie Articles</h1>
+<section class="news_container">
+    <h1>Game Articles</h1>
     <div class="grid grid-cols-3 gap-6">
-        @foreach ($movieNews as $i => $news)
+        @foreach ($gameNews as $i => $news)
             @if ($i < 6)
                 <div class="news_wrapper flex cursor-pointer">
                     <div class="thumbnail">

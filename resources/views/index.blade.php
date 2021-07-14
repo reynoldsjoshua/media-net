@@ -2,16 +2,12 @@
     
     <script src="{{ asset('/js/slideshow.js') }}"></script>
     
-    {{-- show featured movies --}}
     <x-featured-movies :movies="$movies"/>
 
     <x-movie-news :movieNews="$movieNews"/>
 
-    <div class="game_background">
-        
-        {{-- show featured games --}}
-        <x-featured-games :games="$games"/>
-    
-    </div>
-    
+    <x-featured-games :games="$games"/>
+
+    <x-game-news :gameNews="$gameNews"/>
+
 </x-app>
