@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class HorrorGenre extends Component
+class ActionGenre extends Component
 {
     public $movies;
     /**
@@ -24,6 +24,6 @@ class HorrorGenre extends Component
      */
     public function render()
     {
-        return view('components.movies.horror-genre');
+        return view('components.movies.action-genre');
     }
 }

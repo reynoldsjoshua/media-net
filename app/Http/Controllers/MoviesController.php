@@ -32,11 +32,9 @@ class MoviesController extends Controller
     public function index()
     {
         $movies = Movie::with('director')->get();
-        $horror = Movie::with('director')->where('genre', '=', 'Horror')->get();
 
         return view('movies', [
-            'movies' => $movies,
-            'horror' => $horror,
+            'movies' => $movies
         ]);
 
     }

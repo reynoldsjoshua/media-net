@@ -1,5 +1,5 @@
 @foreach ($movies as $i => $movie)
-  @if ($movie->genre == 'Horror')
+  @if ($movie->genre == 'Scyfy')
     <p><span>Movie Image: </span>{{ $movie->url }}</p>
     <p><span>Title: </span>{{ $movie->name }}</p>
     <p><span>Overview: </span>{{ $movie->description }}</p>
