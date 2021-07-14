@@ -25,7 +25,7 @@
                         <a href="/" class="active">Home</a>
                     </li>
                     <li class="text-white nav_link px-p18">
-                        <a href="#">Movies</a>
+                        <a href="{{ route('movies') }}">Movies</a>
                     </li>
                     <li class="text-white nav_link px-p18">
                         <a href="#">Games</a>
