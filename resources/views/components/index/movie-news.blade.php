@@ -5,7 +5,7 @@
             @if ($i < 6)
                 <div class="news_wrapper flex cursor-pointer">
                     <div class="thumbnail">
-                        <img src="{{ $news->url }}" alt="">
+                        <img src="https://placekitten.com/75/75" alt="">
                     </div>
                     <div class="description">
                         <h2>{{ $news->title }}</h2>
