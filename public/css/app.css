@@ -60,12 +60,13 @@ textarea {
 }
 
 .background {
-  background-image: url("/img/background.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-image: url("/storage/background.svg");
   max-width: 1920px;
   margin: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navigation {
@@ -163,7 +164,7 @@ textarea {
   margin: auto;
 }
 .footer_background .footer {
-  background-image: url("/img/footer.svg");
+  background-image: url("/storage/footer.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
