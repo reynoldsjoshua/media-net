@@ -3,8 +3,8 @@
   <div class="featured_wrapper">
     @foreach ($movies as $i => $movie)
       @if ($i < 5)
-        <div class="mySlides">
-          <div class="image relative overflow-hidden flex justify-center items-center" style="background-image: url('https://placekitten.com/1200/400')">
+        <div class="mySlides cursor-pointer">
+          <div class="image relative overflow-hidden flex justify-center items-center" style="background-image: url('{{ $movie->url }}')">
             <h2 class="relative -right-full">{{ $movie->name }}</h2>
             <div class="layover"></div>
           </div>
@@ -24,8 +24,8 @@
   <div class="grid grid-cols-5 gap-4">
     @foreach ($movies as $i => $movie)
       @if ($i < 5)
-        <div class="small_image_wrapper h- relative overflow-hidden" style="background-image: url('https://placekitten.com/200/200')" onclick="currentSlide({{ $i + 1 }})">
-          <h3 class="absolute">{{ $movie->name }}</h3>
+        <div class="small_image_wrapper h- relative cursor-pointer overflow-hidden" style="background-image: url('{{ $movie->url }}')" onclick="currentSlide({{ $i + 1 }})">
+          <h3 class="absolute">{{ $movie->title }}</h3>
           <div class="layover"></div>
         </div>
       @endif

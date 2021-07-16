@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Movie::factory(20)->create();
-        Game::factory(20)->create();
-        MovieNews::factory(20)->create();
-        GameNews::factory(20)->create();
+        Movie::factory(50)->create();
+        Game::factory(50)->create();
+        MovieNews::factory(50)->create();
+        GameNews::factory(50)->create();
     }
 }

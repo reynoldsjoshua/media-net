@@ -3,8 +3,8 @@
   <div class="featured_wrapper">
     @foreach ($games as $i => $game)
       @if ($i < 5)
-        <div class="mySlides2">
-          <div class="image relative overflow-hidden flex justify-center items-center" style="background-image: url('https://placekitten.com/1200/400')">
+        <div class="mySlides2 cursor-pointer">
+          <div class="image relative overflow-hidden flex justify-center items-center" style="background-image: url('{{ $game->url }}')">
             <h2 class="relative -right-full">{{ $game->title }}</h2>
             <div class="layover"></div>
           </div>
@@ -23,7 +23,7 @@
   <div class="grid grid-cols-5 gap-4">
     @foreach ($games as $i => $game)
       @if ($i < 5)
-        <div class="small_image_wrapper relative overflow-hidden" style="background-image: url('https://placekitten.com/200/200')" onclick="currentSlide({{ $i + 1 }})">
+        <div class="small_image_wrapper relative cursor-pointer overflow-hidden" style="background-image: url('{{ $game->url }}')" onclick="currentSlide({{ $i + 1 }})">
           <h3 class="absolute">{{ $game->title }}</h3>
           <div class="layover"></div>
         </div>
