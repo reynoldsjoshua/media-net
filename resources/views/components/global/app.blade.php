@@ -22,10 +22,10 @@
                         </a>
                     </li>
                     <li class="text-white pr-p18 nav_link">
-                        <a href="/" class="active">Home</a>
+                        <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
                     </li>
                     <li class="text-white nav_link px-p18">
-                        <a href="{{ route('movies') }}">Movies</a>
+                        <a href="{{ route('movies') }}" class="{{ request()->is('movies') ? 'active' : '' }}">Movies</a>
                     </li>
                     <li class="text-white nav_link px-p18">
                         <a href="#">Games</a>
