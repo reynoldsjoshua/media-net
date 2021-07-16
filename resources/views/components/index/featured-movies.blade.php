@@ -5,7 +5,7 @@
       @if ($i < 5)
         <div class="mySlides">
           <div class="image relative cursor-pointer overflow-hidden flex justify-center items-center" style="background-image: url('{{ $movie->url }}')">
-            <h2 class="relative -right-full">{{ $movie->name }}</h2>
+            <h2 class="relative -right-full">{{ $movie->title }}</h2>
             <div class="layover"></div>
           </div>
           <div class="slide_info flex">
