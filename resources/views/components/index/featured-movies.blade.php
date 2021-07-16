@@ -3,8 +3,8 @@
   <div class="featured_wrapper">
     @foreach ($movies as $i => $movie)
       @if ($i < 5)
-        <div class="mySlides cursor-pointer">
-          <div class="image relative overflow-hidden flex justify-center items-center" style="background-image: url('{{ $movie->url }}')">
+        <div class="mySlides">
+          <div class="image relative cursor-pointer overflow-hidden flex justify-center items-center" style="background-image: url('{{ $movie->url }}')">
             <h2 class="relative -right-full">{{ $movie->name }}</h2>
             <div class="layover"></div>
           </div>

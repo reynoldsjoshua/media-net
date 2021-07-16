@@ -5,10 +5,10 @@
             @if ($i < 6)
                 <div class="news_wrapper flex cursor-pointer">
                     <div class="thumbnail">
-                        <img src="https://placekitten.com/75/75" alt="">
+                        <img src="{{ $news->url }}" alt="">
                     </div>
                     <div class="description">
-                        <h2>{{ $news->title }}</h2>
+                        <h2>{{ substr($news->title, 0,  20) }}</h2>
                         <p>{{ $news->description }}</p>
                     </div>
                 </div>

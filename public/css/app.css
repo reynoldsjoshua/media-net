@@ -68,6 +68,10 @@ textarea {
   margin: auto;
 }
 
+.active {
+  color: #32E7CA;
+}
+
 .navigation {
   background-color: #3348A0;
   padding: 0.75rem 1.5rem;
@@ -100,9 +104,6 @@ textarea {
   transform: translate(-50%, -50%);
 }
 .navigation nav ul .nav_link:hover {
-  color: #32E7CA;
-}
-.navigation nav ul .nav_link .active {
   color: #32E7CA;
 }
 .navigation nav .logo_container {
@@ -388,6 +389,8 @@ textarea {
 }
 .news_container .news_wrapper .description h2 {
   font-size: 23px;
+  margin-bottom: 0;
+  color: #33E7CB;
 }
 .news_container .news_wrapper .description p {
   font-size: 16px;
