@@ -11,8 +11,8 @@
           <div class="slide_info flex">
             <p><span class="featured_info">Directed By: </span>{{ $movie->director->name }}</p>
             <p><span class="featured_info">Rating: </span>{{ $movie->rating }}</p>
-            <p><span class="featured_info">Duration: </span>{{ $movie->genre }}</p>
-            <p><span class="featured_info">Genre: </span>{{ $movie->duration }}</p>
+            <p><span class="featured_info">Duration: </span>{{ $movie->duration }}min</p>
+            <p><span class="featured_info">Genre: </span>{{ $movie->genre }}</p>
           </div>
         </div>
       @endif

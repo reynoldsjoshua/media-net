@@ -9,9 +9,8 @@
             <div class="layover"></div>
           </div>
           <div class="slide_info flex">
+            <p><span class="featured_info">Rating: </span>{{ $game->release_date }}</p>
             <p><span class="featured_info">Rating: </span>{{ $game->rating }}</p>
-            <p><span class="featured_info">Duration: </span>{{ $game->genre }}</p>
-            <p><span class="featured_info">Genre: </span>{{ $game->duration }}</p>
           </div>
         </div>
       @endif
