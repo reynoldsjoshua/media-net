@@ -1,4 +1,4 @@
-<x-app>
+<x-app title="Home">
     
     <script src="{{ asset('/js/slideshow.js') }}"></script>
     

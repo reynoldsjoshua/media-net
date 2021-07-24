@@ -1,4 +1,4 @@
-<x-app>
+<x-app title="Movies">
     
     <x-hero-section :movies="$movies"/>
 
