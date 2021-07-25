@@ -1,0 +1,29 @@
+.movie_section
+     position: relative
+     &::after
+          content: ""
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          width: 291px
+          background-image: linear-gradient(to left, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), rgba(48, 56, 90, 1) 100%)
+          z-index: 20
+     &::before
+          content: ""
+          position: absolute
+          right: 0
+          top: 0
+          height: 100%
+          width: 291px
+          background-image: linear-gradient(to right, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), rgba(48, 56, 90, 1) 100%)
+          z-index: 20
+     .movies_card
+          transition: all 0.5s ease-in-out
+          &:hover .hidden_card
+               left: 100%
+               opacity: 1
+          &:hover
+               margin-right: 311px
+          .hidden_card, .main_card
+               transition: all 0.5s ease-in-out

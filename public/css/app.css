@@ -60,7 +60,7 @@ textarea {
 }
 
 .background {
-  background-image: url("/storage/background.svg");
+  background-image: url("/storage/svg/background.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -75,7 +75,6 @@ textarea {
 .navigation {
   background-color: #3348A0;
   padding: 0.75rem 1.5rem;
-  margin-bottom: 83px;
   border-bottom: 1px solid #5C6FBE;
 }
 .navigation nav {
@@ -159,12 +158,11 @@ textarea {
 }
 
 .footer_background {
-  padding-top: 83px;
   max-width: 1920px;
   margin: auto;
 }
 .footer_background .footer {
-  background-image: url("/storage/footer.svg");
+  background-image: url("/storage/svg/footer.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -393,4 +391,63 @@ textarea {
 }
 .news_container .news_wrapper .description p {
   font-size: 16px;
+}
+
+.movie_section {
+  position: relative;
+}
+.movie_section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 291px;
+  background-image: linear-gradient(to left, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), #30385a 100%);
+  z-index: 20;
+}
+.movie_section::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 291px;
+  background-image: linear-gradient(to right, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), #30385a 100%);
+  z-index: 20;
+}
+.movie_section .movies_card {
+  transition: all 0.5s ease-in-out;
+}
+.movie_section .movies_card:hover .hidden_card {
+  left: 100%;
+  opacity: 1;
+}
+.movie_section .movies_card:hover {
+  margin-right: 311px;
+}
+.movie_section .movies_card .hidden_card, .movie_section .movies_card .main_card {
+  transition: all 0.5s ease-in-out;
+}
+
+.movie_hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), #30385a 100%);
+  z-index: 20;
+}
+
+.side_nav::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), #30385a 100%);
+  z-index: 20;
 }
