@@ -1,5 +1,7 @@
 <x-app title="Movies">
 
+    <script src="{{ asset('/js/thumbnailSlider.js') }}"></script>
+
     <div class="relative bg-dark-blue">
         <x-side-nav />
         

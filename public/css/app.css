@@ -393,9 +393,6 @@ textarea {
   font-size: 16px;
 }
 
-.movie_section {
-  position: relative;
-}
 .movie_section::after {
   content: "";
   position: absolute;
@@ -416,17 +413,20 @@ textarea {
   background-image: linear-gradient(to right, rgba(48, 56, 90, 0), rgba(48, 56, 90, 0.8), #30385a 100%);
   z-index: 20;
 }
-.movie_section .movies_card {
-  transition: all 0.5s ease-in-out;
+.movie_section #wrapper {
+  transition: all 1s ease-in-out;
 }
-.movie_section .movies_card:hover .hidden_card {
+.movie_section #wrapper .movies_card {
+  transition: all 0.5s linear;
+}
+.movie_section #wrapper .movies_card:hover .hidden_card {
   left: 100%;
   opacity: 1;
 }
-.movie_section .movies_card:hover {
+.movie_section #wrapper .movies_card:hover {
   margin-right: 311px;
 }
-.movie_section .movies_card .hidden_card, .movie_section .movies_card .main_card {
+.movie_section #wrapper .movies_card .hidden_card, .movie_section #wrapper .movies_card .main_card {
   transition: all 0.5s ease-in-out;
 }
 
