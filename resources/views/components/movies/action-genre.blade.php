@@ -1,7 +1,11 @@
 <section class="movie_section relative mt-28 mb-24 overflow-hidden" style="height: 550px;">
-        <button class="ml-80 relative z-50" onclick="moveRight(event)">right</button>
-        <button class="ml-80 relative z-50" onclick="moveLeft(event)">left</button>
-    <div id="wrapper" class="flex absolute left-0 top-0" style="left: 300px;">
+    <div class="next_buttons1 top-0 rounded-xl opacity-0 absolute z-50  h-full cursor-pointer text-9xl text-white flex items-center" style="left: 291px;" onclick="moveRight(event)">
+        <i class="fa fa-chevron-left mb-20" aria-hidden="true"></i>
+    </div>
+    <div class="next_buttons2 top-0 rounded-xl opacity-0 absolute z-50 h-full cursor-pointer text-9xl text-white flex items-center" style="right: 230px;" onclick="moveLeft(event)">
+        <i class="fa fa-chevron-right mb-20" aria-hidden="true"></i>
+    </div>
+    <div class="wrapper flex absolute left-0 top-0" style="left: 300px;">
         @foreach ($movies as $i => $movie)
             @if ($movie->genre == 'Action')
                 <div class="movies_card ml-6 mr-6 text-white flex relative">

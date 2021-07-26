@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ asset('/css/tailwindcss.css') }}">
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="background">
@@ -28,7 +29,7 @@
                             <a href="{{ route('movies') }}" class="{{ request()->is('movies') ? 'active' : '' }}">Movies</a>
                         </li>
                         <li class="text-white nav_link px-p18">
-                            <a href="#">Games</a>
+                            <a href="{{ route('games') }}" class="{{ request()->is('games') ? 'active' : '' }}">Games</a>
                         </li>
                         <li class="text-white nav_link px-p18">
                             <a href="#">News</a>

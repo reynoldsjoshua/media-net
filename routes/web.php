@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GamesController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MoviesController;
 
@@ -18,3 +19,5 @@ use App\Http\Controllers\MoviesController;
 Route::get('/', [IndexController::class, 'index'])->name('home');
 
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies');
+
+Route::get('/games', [GamesController::class, 'index'])->name('games');
