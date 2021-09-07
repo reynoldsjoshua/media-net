@@ -2,11 +2,11 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
@@ -23,7 +23,7 @@ class Post extends Resource
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -31,7 +31,7 @@ class Post extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title', 'body'
+        'id',
     ];
 
     /**
@@ -44,9 +44,10 @@ class Post extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Title', 'title')->sortable(),
-            Trix::make('Body', 'body')->sortable(),
-            Textarea::make('Description', 'description')->sortable(),
+            Text::make('Title'),
+            Trix::make('Content')->alwaysShow(),
+            Date::make('Created at')->format('DD MM YYYY'),
+            Date::make('Updated at')->format('DD MM YYYY'),
         ];
     }
 

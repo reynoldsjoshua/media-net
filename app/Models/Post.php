@@ -9,8 +9,10 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'body',
-    ];
+    protected $table = 'posts';
+
+    public static function boot(){
+        parent::boot();
+        static::function( function ($user_id){});
+    }
 }
