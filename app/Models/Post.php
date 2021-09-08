@@ -11,8 +11,4 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    public static function boot(){
-        parent::boot();
-        static::function( function ($user_id){});
-    }
 }
