@@ -5,18 +5,20 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Post extends Resource
+class Movie extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Post::class;
+    public static $model = \App\Models\Movie::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -44,10 +46,11 @@ class Post extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Title'),
-            Trix::make('Content')->alwaysShow(),
-            Date::make('Created at')->format('DD MM YYYY'),
-            Date::make('Updated at')->format('DD MM YYYY'),
+            Text::make('Title')->sortable(),
+            Date::make('Released At'),
+            Number::make('Duration'),
+            Text::make('Genre'),
+            Text::make('Rating'),
         ];
     }
 
